@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.div-container {
+  width: 400px;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 0px rgba(204, 204, 204, 1);
+}
+
+.user-name {
+  font-weight: 900;
+}
+
+.user-contact {
+  color: #eee;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #505355;
+  color: white;
+}
+
+button:hover {
+  background-color: #5becd8;
+}
