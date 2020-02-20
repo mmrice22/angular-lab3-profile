@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+// interfaces
 import { UserProfile } from "../interfaces/user-profile";
+// services
 import { ProfileServiceService } from "../profile-service.service";
 
 @Component({
@@ -10,6 +12,7 @@ import { ProfileServiceService } from "../profile-service.service";
 export class ProfileComponent implements OnInit {
   userProfile: UserProfile;
 
+  // service equals profile service
   constructor(private service: ProfileServiceService) {}
 
   ngOnInit(): void {

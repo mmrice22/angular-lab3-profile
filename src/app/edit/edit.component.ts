@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { UserProfile } from "../interfaces/user-profile";
-import { ProfileServiceService } from "../profile-service.service";
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
+// interfaces
+import { UserProfile } from "../interfaces/user-profile";
+// services
+import { ProfileServiceService } from "../profile-service.service";
 
 @Component({
   selector: "app-edit",
@@ -10,6 +12,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./edit.component.css"]
 })
 export class EditComponent implements OnInit {
+  //  gonna call the setUserProfile() from our service in this component
   userProfile: UserProfile;
 
   constructor(
@@ -17,7 +20,9 @@ export class EditComponent implements OnInit {
     private routerInstance: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userProfile = this.service.getUserProfile();
+  }
 
   update(form: NgForm) {
     this.service.setUserProfile(form.value);
